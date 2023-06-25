@@ -16,6 +16,5 @@ Description: "Extension to capture the gender status of the pet."
 * value[x].system = "http://example.org/fhir/CodeSystem/animal-gender-status" (exactly)
 * value[x].version ..0
 * value[x].code 1..
-* value[x].code from $animal-gender-status-value-set (required)
 * value[x].display 1..
 * value[x].userSelected ..0

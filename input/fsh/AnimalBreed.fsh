@@ -16,6 +16,5 @@ Description: "Extension to capture the breed of the animal."
 * value[x].system = "http://example.org/fhir/CodeSystem/animal-breed" (exactly)
 * value[x].version ..0
 * value[x].code 1..
-* value[x].code from AnimalBreedValueSet (required)
 * value[x].display 1..
 * value[x].userSelected ..0

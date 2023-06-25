@@ -17,7 +17,5 @@ Description: "Extension to capture the animal species of the pet."
 * value[x].system = "http://example.org/fhir/CodeSystem/animal-species" (exactly)
 * value[x].version ..0
 * value[x].code 1..
-* value[x].code from AnimalSpeciesValueSet (required)
-* value[x].code ^binding.description = "Animal Species"
 * value[x].display 1..
 * value[x].userSelected ..0
