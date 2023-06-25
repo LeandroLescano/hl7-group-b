@@ -4,7 +4,9 @@
   "name": "AnimalSpeciesCodeSystem",
   "status": "active",
   "publisher": "Zentricx Group B",
+  "title": "Animal Species Code System",
   "description": "A code system that provides codes for different animal species.",
+  "count": 6,
   "concept": [
     {
       "code": "dogs",

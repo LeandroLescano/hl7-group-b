@@ -1,5 +1,6 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "AnimalBreed",
   "url": "http://example.org/fhir/StructureDefinition/animal-breed",
   "name": "AnimalBreed",
   "status": "active",
@@ -16,6 +17,7 @@
   ],
   "type": "Extension",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
   "differential": {
     "element": [
       {
@@ -23,25 +25,53 @@
         "path": "Extension",
         "short": "Breed Extension",
         "definition": "The breed of the animal.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "strength": "required",
-          "description": "Animal breed",
-          "valueSet": "http://terminology.example.org/ValueSet/animal-breeds"
-        }
+        "isSummary": false
       },
       {
         "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://example.org/fhir/StructureDefinition/animal-breed"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      },
+      {
+        "id": "Extension.value[x].system",
+        "path": "Extension.value[x].system",
+        "min": 1,
+        "fixedUri": "http://example.org/fhir/CodeSystem/animal-breed"
+      },
+      {
+        "id": "Extension.value[x].version",
+        "path": "Extension.value[x].version",
+        "max": "0"
+      },
+      {
+        "id": "Extension.value[x].code",
+        "path": "Extension.value[x].code",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://example.org/fhir/ValueSet/animal-breed"
+        }
+      },
+      {
+        "id": "Extension.value[x].display",
+        "path": "Extension.value[x].display",
+        "min": 1
+      },
+      {
+        "id": "Extension.value[x].userSelected",
+        "path": "Extension.value[x].userSelected",
+        "max": "0"
       }
     ]
   }

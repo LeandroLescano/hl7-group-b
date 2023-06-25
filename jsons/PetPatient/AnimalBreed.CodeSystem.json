@@ -4,7 +4,9 @@
   "name": "AnimalBreedCodeSystem",
   "status": "active",
   "publisher": "Zentricx Group B",
+  "title": "Animal Breed Code System",
   "description": "A code system that provides codes for different animal breeds.",
+  "count": 5,
   "concept": [
     {
       "code": "HCS",

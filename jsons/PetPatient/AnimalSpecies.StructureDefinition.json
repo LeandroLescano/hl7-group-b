@@ -16,6 +16,7 @@
   ],
   "type": "Extension",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
   "differential": {
     "element": [
       {
@@ -24,23 +25,13 @@
         "short": "Species Extension",
         "definition": "The species of the animal.",
         "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "strength": "required",
-          "description": "Animal species",
-          "valueSet": "http://example.org/fhir/ValueSet/animal-species"
-        }
+        "isSummary": false
       },
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://example.org/fhir/StructureDefinition/patient-species"
+        "fixedUri": "http://example.org/fhir/StructureDefinition/animal-species"
       },
       {
         "id": "Extension.value[x]",
@@ -56,7 +47,7 @@
         "id": "Extension.value[x].system",
         "path": "Extension.value[x].system",
         "min": 1,
-        "fixedUri": "http://example.org/fhir/ValueSet/animal-species"
+        "fixedUri": "http://example.org/fhir/CodeSystem/animal-species"
       },
       {
         "id": "Extension.value[x].version",
@@ -68,7 +59,7 @@
         "path": "Extension.value[x].code",
         "min": 1,
         "binding": {
-          "strength": "extensible",
+          "strength": "required",
           "description": "Animal Species",
           "valueSet": "http://example.org/fhir/ValueSet/animal-species"
         }

@@ -4,7 +4,9 @@
   "name": "AnimalGenderStatusCodeSystem",
   "status": "active",
   "publisher": "Zentricx Group B",
+  "title": "Animal Gender Status Code System",
   "description": "A code system that provides codes for different gender statuses of animals.",
+  "count": 4,
   "concept": [
     {
       "code": "INTACT",
