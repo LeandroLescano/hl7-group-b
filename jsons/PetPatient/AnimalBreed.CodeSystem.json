@@ -1,0 +1,60 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://example.org/fhir/CodeSystem/animal-breed",
+  "name": "AnimalBreedCodeSystem",
+  "status": "active",
+  "publisher": "Zentricx Group B",
+  "description": "A code system that provides codes for different animal breeds.",
+  "concept": [
+    {
+      "code": "HCS",
+      "display": "House Cat Shorthair",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Gato Doméstico de Pelo Corto"
+        }
+      ]
+    },
+    {
+      "code": "SCS",
+      "display": "Siamese Cat",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Gato Siamés"
+        }
+      ]
+    },
+    {
+      "code": "PERS",
+      "display": "Persian Cat",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Gato Persa"
+        }
+      ]
+    },
+    {
+      "code": "BPC",
+      "display": "British Shorthair",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Gato Británico de Pelo Corto"
+        }
+      ]
+    },
+    {
+      "code": "MNS",
+      "display": "Minskin",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Minskin"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/PetPatient",
+  "name": "PetPatient",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 3
+      },
+      {
+        "id": "Patient.extension:AnimalBreed",
+        "path": "Patient.extension",
+        "sliceName": "AnimalBreed",
+        "min": 1,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://example.org/fhir/StructureDefinition/animal-breed"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:AnimalSpecies",
+        "path": "Patient.extension",
+        "sliceName": "AnimalSpecies",
+        "min": 1,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://example.org/fhir/StructureDefinition/animal-species"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:AnimalGenderStatus",
+        "path": "Patient.extension",
+        "sliceName": "AnimalGenderStatus",
+        "min": 1,
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://example.org/fhir/StructureDefinition/animal-gender-status"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.identifier",
+        "path": "Patient.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber",
+        "path": "Patient.identifier",
+        "sliceName": "MedicalRecordNumber",
+        "short": "Historia Clínica",
+        "definition": "Número/Identificador de Historia Clínica de la mascota",
+        "min": 1
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.use",
+        "path": "Patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.type.coding.system",
+        "path": "Patient.identifier.type.coding.system",
+        "min": 1,
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0203"
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.type.coding.version",
+        "path": "Patient.identifier.type.coding.version",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.type.coding.code",
+        "path": "Patient.identifier.type.coding.code",
+        "min": 1,
+        "fixedCode": "MR"
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.type.coding.display",
+        "path": "Patient.identifier.type.coding.display",
+        "min": 1,
+        "fixedString": "Medical record number"
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.type.coding.userSelected",
+        "path": "Patient.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.type.text",
+        "path": "Patient.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.system",
+        "path": "Patient.identifier.system",
+        "min": 1,
+        "fixedUri": "http://vetGroupB.example.com/animal-ehr/"
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.value",
+        "path": "Patient.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MedicalRecordNumber.assigner",
+        "path": "Patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber",
+        "path": "Patient.identifier",
+        "sliceName": "MicrochipNumber",
+        "short": "Número de Microchip",
+        "definition": "Identificación por radiofrecuencia (RFID) del animal (acorde con los estándares ISO 11784 y 11785)",
+        "max": "1"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.use",
+        "path": "Patient.identifier.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.type.coding.system",
+        "path": "Patient.identifier.type.coding.system",
+        "min": 1,
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0203"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.type.coding.version",
+        "path": "Patient.identifier.type.coding.version",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.type.coding.code",
+        "path": "Patient.identifier.type.coding.code",
+        "min": 1,
+        "fixedCode": "MCN"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.type.coding.display",
+        "path": "Patient.identifier.type.coding.display",
+        "min": 1,
+        "fixedString": "Microchip Number"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.type.coding.userSelected",
+        "path": "Patient.identifier.type.coding.userSelected",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.type.text",
+        "path": "Patient.identifier.type.text",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.system",
+        "path": "Patient.identifier.system",
+        "min": 1,
+        "fixedUri": "http://vetGroupB.example.com/animal-id/"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.value",
+        "path": "Patient.identifier.value",
+        "min": 1
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.period",
+        "path": "Patient.identifier.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.identifier:MicrochipNumber.assigner",
+        "path": "Patient.identifier.assigner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.active",
+        "path": "Patient.active",
+        "min": 1
+      },
+      {
+        "id": "Patient.name.use",
+        "path": "Patient.name.use",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name.text",
+        "path": "Patient.name.text",
+        "short": "Nombre de la mascota",
+        "min": 1
+      },
+      {
+        "id": "Patient.name.family",
+        "path": "Patient.name.family",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name.given",
+        "path": "Patient.name.given",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name.prefix",
+        "path": "Patient.name.prefix",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name.suffix",
+        "path": "Patient.name.suffix",
+        "max": "0"
+      },
+      {
+        "id": "Patient.name.period",
+        "path": "Patient.name.period",
+        "max": "0"
+      },
+      {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "max": "0"
+      },
+      {
+        "id": "Patient.gender",
+        "path": "Patient.gender",
+        "definition": "Código de género de la mascota",
+        "min": 1
+      },
+      {
+        "id": "Patient.birthDate",
+        "path": "Patient.birthDate",
+        "short": "Fecha de nacimiento",
+        "min": 1
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "max": "0"
+      },
+      {
+        "id": "Patient.maritalStatus",
+        "path": "Patient.maritalStatus",
+        "max": "0"
+      },
+      {
+        "id": "Patient.multipleBirth[x]",
+        "path": "Patient.multipleBirth[x]",
+        "max": "0"
+      },
+      {
+        "id": "Patient.photo",
+        "path": "Patient.photo",
+        "max": "0"
+      },
+      {
+        "id": "Patient.contact",
+        "path": "Patient.contact",
+        "definition": "Información de contacto de la persona relacionada que desempeña el rol de propietario o responsable de la mascota",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Patient.communication",
+        "path": "Patient.communication",
+        "max": "0"
+      },
+      {
+        "id": "Patient.generalPractitioner",
+        "path": "Patient.generalPractitioner",
+        "max": "0"
+      },
+      {
+        "id": "Patient.managingOrganization",
+        "path": "Patient.managingOrganization",
+        "max": "0"
+      },
+      {
+        "id": "Patient.link",
+        "path": "Patient.link",
+        "definition": "Vínculo con el recurso de la Persona Relacionada (RelatedPerson), que desempeña el rol de dueño de la mascota (perfil PetOwnerRelatedPerson).",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://example.com/fhir/StructureDefinition/pet-patient-contact-role-extension",
+      "valueReference": {
+        "reference": "http://example.com/fhir/CodeSystem/contact-role-extension"
+      }
+    }
+  ]
+}

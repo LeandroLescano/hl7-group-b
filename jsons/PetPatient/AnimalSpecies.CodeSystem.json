@@ -1,0 +1,70 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://example.org/fhir/CodeSystem/animal-species",
+  "name": "AnimalSpeciesCodeSystem",
+  "status": "active",
+  "publisher": "Zentricx Group B",
+  "description": "A code system that provides codes for different animal species.",
+  "concept": [
+    {
+      "code": "dogs",
+      "display": "Dogs",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Perro"
+        }
+      ]
+    },
+    {
+      "code": "cats",
+      "display": "Cats",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Gato"
+        }
+      ]
+    },
+    {
+      "code": "fish",
+      "display": "Fish",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Peces domésticos"
+        }
+      ]
+    },
+    {
+      "code": "birds",
+      "display": "Birds",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Pájaros"
+        }
+      ]
+    },
+    {
+      "code": "hamsters",
+      "display": "Hamsters and other rodents",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Hámsters y otros roedores"
+        }
+      ]
+    },
+    {
+      "code": "reptiles",
+      "display": "Reptiles",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Reptiles"
+        }
+      ]
+    }
+  ]
+}

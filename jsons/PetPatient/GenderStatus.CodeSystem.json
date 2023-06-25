@@ -1,0 +1,50 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://example.org/fhir/CodeSystem/animal-gender-status",
+  "name": "AnimalGenderStatusCodeSystem",
+  "status": "active",
+  "publisher": "Zentricx Group B",
+  "description": "A code system that provides codes for different gender statuses of animals.",
+  "concept": [
+    {
+      "code": "INTACT",
+      "display": "Intact",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Intacto"
+        }
+      ]
+    },
+    {
+      "code": "NEUTERED",
+      "display": "Neutered",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Castrado"
+        }
+      ]
+    },
+    {
+      "code": "SPAYED",
+      "display": "Spayed",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Esterilizado"
+        }
+      ]
+    },
+    {
+      "code": "UNKNOWN",
+      "display": "Unknown",
+      "property": [
+        {
+          "code": "display",
+          "valueString": "Desconocido"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://example.org/fhir/ValueSet/animal-species",
+  "name": "AnimalSpecies",
+  "status": "active",
+  "publisher": "Zentricx Group B",
+  "description": "A value set that includes different animal species for pets.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://example.org/fhir/CodeSystem/animal-species"
+      }
+    ]
+  }
+}

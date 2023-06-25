@@ -1,0 +1,15 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://example.org/fhir/ValueSet/animal-breed",
+  "name": "AnimalBreedValueSet",
+  "status": "active",
+  "publisher": "Zentricx Group B",
+  "description": "A value set that includes different animal breeds.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://example.org/fhir/CodeSystem/animal-breed"
+      }
+    ]
+  }
+}

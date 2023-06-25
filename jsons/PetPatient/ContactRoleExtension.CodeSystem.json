@@ -1,0 +1,19 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://example.com/fhir/CodeSystem/contact-role-extension",
+  "name": "ContactRoleExtension",
+  "status": "active",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "OWN",
+      "display": "Owner",
+      "definition": "Pet owner (applies to animal patient)"
+    },
+    {
+      "code": "RSP",
+      "display": "Responsible",
+      "definition": "Responsible for the pet (applies to animal patient)"
+    }
+  ]
+}
